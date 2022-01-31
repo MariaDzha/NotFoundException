@@ -28,7 +28,7 @@ public class ProductRepository {
     return null;
   }
 
-  public void removeById(int id) {
+  public void removeById(int id) throws NotFoundException {
     Product product = findById(id);
     if (product == null) throw new NotFoundException("Element with id: " + id + " not found");
 
